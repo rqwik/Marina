@@ -52,10 +52,16 @@ namespace Marina
                 TextColor = Color.Black,
                 BackgroundColor = Color.RosyBrown
             };
+            Button Lum_btn = new Button
+            {
+                Text = "Lumememm",
+                TextColor = Color.Black,
+                BackgroundColor = Color.RosyBrown
+            };
             StackLayout st = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
-                Children = { Entry_btn, Timer_btn, Box_btn, Valg_btn, Grid_btn, Image_btn},
+                Children = { Entry_btn, Timer_btn, Box_btn, Valg_btn, Grid_btn, Image_btn, Lum_btn},
                 BackgroundColor = Color.Bisque
             };
             Content = st;
@@ -65,6 +71,12 @@ namespace Marina
             Valg_btn.Clicked += Valg_btn_Clicked;
             Grid_btn.Clicked += Grid_btn_Clicked;
             Image_btn.Clicked += Image_btn_Clicked;
+            Lum_btn.Clicked += Lum_btn_Clicked;
+        }
+
+        private async void Lum_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Lum_Page());
         }
 
         private async void Image_btn_Clicked(object sender, EventArgs e)

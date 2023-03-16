@@ -37,10 +37,9 @@ namespace Marina
             }
             else
             {
-                img.Source = "rassver.jpeg";
+                img.Source = "rassvet.jpeg";
             }
         }
-
         private void Sw_Toggled(object sender, ToggledEventArgs e)
         {
             if (e.Value)
